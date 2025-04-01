@@ -1,18 +1,13 @@
 module.exports = {
   async send(ctx: any) {
     try {
-      const { to, subject, message } = ctx.request.body;
+      const { to, subject, text, html } = ctx.request.body;
 
-      await strapi.plugins["email"].services.email.send({
-        to,
-        from: "noreply@thrivesphere.com",
-        subject,
-        html: message,
-      });
+      await strapi.services.email.sendEmail({ to, subject, text, html });
 
-      ctx.send({ message: "Email sent Successfully" });
+      ctx.send({ message: "Email sent successfully!" });
     } catch (error) {
-      ctx.throw(error, "Email not sent");
+      ctx.throw(500, "Failed to send email");
     }
   },
 };
