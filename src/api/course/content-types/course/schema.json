@@ -4,7 +4,8 @@
   "info": {
     "singularName": "course",
     "pluralName": "courses",
-    "displayName": "course"
+    "displayName": "course",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -21,16 +22,16 @@
     "premium": {
       "type": "boolean"
     },
-    "videos": {
+    "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true,
-      "required": true
+      ]
     },
     "learners": {
       "type": "integer"
@@ -38,9 +39,6 @@
     "duration": {
       "type": "integer",
       "required": true
-    },
-    "price": {
-      "type": "string"
     },
     "category": {
       "type": "string",

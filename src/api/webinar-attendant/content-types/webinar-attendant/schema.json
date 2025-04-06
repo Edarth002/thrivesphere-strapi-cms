@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "webinar_attendants",
+  "info": {
+    "singularName": "webinar-attendant",
+    "pluralName": "webinar-attendants",
+    "displayName": "webinar-attendant",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "subject": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    }
+  }
+}
