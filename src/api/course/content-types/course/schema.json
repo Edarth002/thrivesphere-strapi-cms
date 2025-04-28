@@ -53,6 +53,9 @@
       "relation": "oneToMany",
       "target": "api::lesson.lesson",
       "mappedBy": "course"
+    },
+    "numberoflessons": {
+      "type": "integer"
     }
   }
 }

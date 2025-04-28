@@ -395,6 +395,7 @@ export interface ApiCourseCourse extends Struct.CollectionTypeSchema {
       'api::course.course'
     > &
       Schema.Attribute.Private;
+    numberoflessons: Schema.Attribute.Integer;
     premium: Schema.Attribute.Boolean;
     publishedAt: Schema.Attribute.DateTime;
     thumbnail: Schema.Attribute.Media<
