@@ -413,6 +413,7 @@ export interface ApiCourseCourse extends Struct.CollectionTypeSchema {
 export interface ApiLessonLesson extends Struct.CollectionTypeSchema {
   collectionName: 'lessons';
   info: {
+    description: '';
     displayName: 'Lesson';
     pluralName: 'lessons';
     singularName: 'lesson';
@@ -436,6 +437,8 @@ export interface ApiLessonLesson extends Struct.CollectionTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID<'Name'>;
     thumbnail: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    transcript: Schema.Attribute.Text;
+    tutor: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
